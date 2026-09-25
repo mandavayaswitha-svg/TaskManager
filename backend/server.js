@@ -12,9 +12,10 @@ const path = require('path');
 // Middleware to handle CORS
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "*",
+    origin: "https://taskmanager-tawny-gamma.vercel.app",
     methods: ["GET", "POST","PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
+     credentials: true,
   })
 );
 
