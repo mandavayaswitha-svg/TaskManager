@@ -1,7 +1,9 @@
 // utils/apiPaths.js
 
-export const BASE_URL = "http://localhost:8000";
-
+//export const BASE_URL = "http://localhost:8000";
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+});
 export const API_PATHS = {
   AUTH: {
     REGISTER: "/api/auth/register", // Register a new user (Admin or Member)
